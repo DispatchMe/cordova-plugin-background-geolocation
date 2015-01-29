@@ -64,11 +64,11 @@ module.exports = {
                 locationTimeout,
                 desiredAccuracy,
                 debug,
-                notificationIcon,
                 notificationTitle,
                 notificationText,
                 activityType,
-                stopOnTerminate
+                stopOnTerminate,
+                notificationIcon
              ]
         );
     },

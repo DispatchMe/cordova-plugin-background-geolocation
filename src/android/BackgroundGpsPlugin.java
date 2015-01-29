@@ -93,8 +93,8 @@ public class BackgroundGpsPlugin extends CordovaPlugin {
 
             try {
                 // Params
-                //    0       1       2           3               4                5               6            7           8                  9                 10              11              12
-                // [params, headers, url, stationaryRadius, distanceFilter, locationTimeout, desiredAccuracy, debug, notificationIcon, notificationTitle, notificationText, activityType, stopOnTerminate]
+                //    0       1       2           3               4                5               6            7            8                  9             10              11               12
+                // [params, headers, url, stationaryRadius, distanceFilter, locationTimeout, desiredAccuracy, debug, notificationTitle, notificationText, activityType, stopOnTerminate, notificationIcon]
                 this.params  = data.getString(0);
                 this.headers = data.getString(1);
                 this.url     = data.getString(2);
@@ -106,12 +106,12 @@ public class BackgroundGpsPlugin extends CordovaPlugin {
                 this.desiredAccuracy  = data.getString(6);
 
                 // Notification Configuration
-                this.notificationIcon  = data.getString(8);
-                this.notificationTitle = data.getString(9);
-                this.notificationText  = data.getString(10);
+                this.notificationIcon  = data.getString(12);
+                this.notificationTitle = data.getString(8);
+                this.notificationText  = data.getString(9);
 
                 this.isDebugging     = data.getString(7);
-                this.stopOnTerminate = data.getString(12);
+                this.stopOnTerminate = data.getString(11);
 
                 callbackContext.success();
             } catch (JSONException e) {
